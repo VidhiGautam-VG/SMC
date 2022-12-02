@@ -1,0 +1,342 @@
+/*---------------------------------------------------header navigation-------------------------*/
+		nav{
+			background: #242526;
+			position: fixed;
+			width: 100%;
+			z-index: 999;
+			height: 65px;
+			line-height: 65px;
+		}
+		nav input{
+			visibility: hidden;
+		}
+		.photo{
+			display: none;
+		}
+		nav .wrapper{
+			position: relative;
+			padding: 0 30px;
+			max-width: 1300px;
+			padding: 0 20px;
+			height: 70px;
+			margin:auto;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.wrapper .logo a{
+			color: #f2f2f2;
+			text-decoration: none;
+			font-size: 30px;
+			font-weight: 600;
+		}
+		.wrapper .nav-links{
+			display: inline-flex;
+		}
+		.nav-links li{
+			list-style: none;
+		}
+		.nav-links li a{
+			color: #f2f2f2;
+			text-decoration: none;
+			font-size: 18px;
+			font-weight: 500;
+			padding: 9px 15px;
+			border-radius: 5px;
+			transition: all 0.3s ease;
+		}
+		.nav-links li a:hover{
+			background: #f00;
+		}
+		.nav-links .Mobile-item{
+			display: none;
+		}
+		.nav-links .service,.nav-links .help-center,.nav-links .product{
+			background:#242526;
+			width: 180px;
+			top: 85px;
+			line-height: 45px;
+			position: absolute;
+			opacity: 0;
+			visibility: hidden;
+			box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+		}
+		.nav-links li:hover .product,
+		.nav-links li:hover .service,
+		.nav-links li:hover .help-center{
+			top: 70px;
+			opacity: 1;
+			visibility: visible;
+			transition: all 0.3 ease;
+		}
+		.product li a,
+		.service li a,
+		.help-center li a{
+			width: 100%;
+			display: block;
+			padding: 0 0 0 15px;
+			font-weight: 400;
+			border-radius: 0px;
+		}
+		.nav-links  .Mobile-item{
+			display: none;
+		}
+		.wrapper .btn{
+			color: #fff;
+			font-size: 20px;
+			cursor: pointer;
+			display: none;
+		}
+		.wrapper .btn.cancel-btn{
+			position: absolute;
+			right:30px;
+			top: 10px; 
+		}
+		@media screen and (max-width: 970px){
+
+			.wrapper .btn{
+				display: block;
+			}
+			.wrapper .nav-links{
+			position: fixed;
+			height: 100vh;
+			width: 100%;
+			max-width: 350px;
+			background: #242526;
+			display: block;
+			top: 0;
+			left: -100%;
+			overflow-y: auto;
+			line-height: 50px;
+			padding: 50px 10px;
+			box-shadow: 0 15px 15px rgba(0,0,0,0,0.18);
+			transition: all 0.3s ease;
+		}
+		/*custom scrollbar*/
+		::-webkit-scrollbar{
+			width: 10px;
+		}
+		::-webkit-scrollbar-thumb{
+			background: #3a3b3c;
+		}
+		#menu-btn:checked ~ .nav-links{
+			left: 0%;
+		}
+		#menu-btn:checked ~ .btn.menu-btn{
+			display: none;
+		}
+		#cancel-btn:checked ~ .btn.menu-btn{
+			display: block;
+		}
+		.nav-links li{
+			margin: 15px 10px;
+		}
+		.nav-links li a{
+			padding: 0 20px;
+			display: block;
+			font-size: 20px;
+		}
+		.nav-links .product,
+		.nav-links .service,
+		.nav-links .help-center{
+			position: static;
+			opacity: 1;
+			visibility: visible;
+			top: 65px;
+			padding-left: 20px;
+			width: 100%;
+			max-height: 0px;
+			overflow: hidden;
+			box-shadow: none;
+			transition: all 0.3s ease;
+		}
+		#ShowDrop:checked ~ .help-center,
+		#Showdrop:checked ~ .product{
+			max-height: 100%;
+		}
+		.nav-links .product li,
+		.nav-links .help-center li{
+			margin: 0;
+		}
+		.nav-links .product li a,
+		.nav-links .help-center li a{
+			font-size: 18px;
+			border-radius: 5px;
+		}
+		.nav-links .Desktop-item{
+			display: none;
+		}
+		.nav-links .Mobile-item{
+			display: block;
+			font-size: 20px;
+			color: #f2f2f2;
+			font-weight: 500;
+			padding-left: 20px;
+			cursor: pointer;
+			border-radius: 5px;
+			transition: all 0.3s ease;
+		}
+		.nav-links .Mobile-item:hover{
+			background: #3a3b3c;
+		}
+		nav input{
+			display: none;
+		}
+}
+
+/*footer section*/
+.container{
+	max-width: 1170px;
+	margin: auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+	padding: 70px 0;
+} 
+/* about us*/
+.footer-col p{
+	font-size: 16px;
+	color: #ffffff;
+	text-align: justify;
+}
+.footer-col p a{
+	text-decoration: none;
+	color: #00f;
+}
+/* get help section*/
+.footer-col{
+	width: 25%;
+	padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+content: '';
+position: absolute;
+left: 0;
+bottom: -10px;
+background-color: blue;
+height: 2px;
+box-sizing: border-box;
+width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a {
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+/*contauct ussection*/
+.footer-col ul i{
+	font-size: 16px;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul i:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+/* social links:-follow us section */
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin-right: 0 10px 10px 0;
+	text-align: center;
+	line-height:40px; 
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+/*copy right section*/
+#copyright {
+	background: #000;
+	width: auto;
+	color: #fff;
+	height: 20px;
+	padding: 20px 0;
+	text-align: center;
+}
+#copyright p{
+	font-size: 18px;
+	color: #fff;
+	word-spacing: 2px;
+	text-transform: capitalize;
+}
+/*responsive*/
+@media only screen and (max-width: 1024px){
+	.footer-col{
+		width:50%;
+		margin-bottom:30px; 
+	}
+}
+.footer-col .Developer a {
+	text-decoration: none;
+	text-underline-position: none;
+	color: #fff;
+	transition: all ease .5s;
+}
+.footer-col .Developer a:hover{
+	color: #00f;
+	padding-left: 8px;
+}
+.gototop{
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #f00;
+	bottom: 10px;
+	right: 40px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 50px;
+	font-size: 22px;
+	transition: background-color .3s;
+	opacity: 0.5s,visibility .5s;
+	opacity: 1;
+	z-index: 1000;
+}
+.gototop i{
+	color: white;
+}
+.gototop:hover{
+	cursor: pointer;
+	background-color: #000;
+}
+.gototop.show{
+	opacity: 1;
+}

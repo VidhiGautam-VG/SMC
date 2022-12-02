@@ -1,0 +1,21 @@
+<?php
+
+session_start();
+if($_SERVER['REQUEST_METHOD']=='POST')
+{
+	if(isset($_POST['Add_to_cart']))
+	{
+		if(isset($_SESSION)['cart']))
+		{
+			$count=count($_SESSION['cart']);
+			$_SESSION['cart'][$count]=array('brand'=>$_POST['brand'],'Price'=>$_POST['Price'],'Quantity'=>1);
+			print_r($_SESSION['cart']);
+		}
+		else
+		{
+			$_SESSION['cart'][0]=array('brand'=>$_POST['brand'],'Price'=>$_POST['Price'],'Quantity'=>1);
+			print_r($_SESSION['cart']);
+		}
+	}
+}
+?>

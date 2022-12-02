@@ -1,0 +1,77 @@
+@charset "utf-8";
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+html{
+	scroll-behavior: smooth;
+}		
+body{
+	background:#fff;
+	font-family: sans-serif;
+	
+}
+
+
+
+/*-------------------------------about section css----------------------------*/
+.aboutus .col-1{
+	width: auto;
+	height: auto;
+	background-color: white;
+	justify-content: center;
+	text-align: center;
+	box-sizing: border-box;
+	border:2px solid transparent ;
+	font-family: "Times New Roman",Times,serif;
+	font-size: 20px;
+}
+#p1::first-letter{
+	color: royalblue;
+	font-size:100px;
+}
+/*our service-section*/
+.col-2{
+	margin: 25px;
+	padding: 15px;
+	width: auto;
+	height: auto;
+	text-align: center;
+	font-family: "Times New Roman",Times,serif;
+	font-size: 20px;
+}
+/*service-section*/
+.service-box{
+	padding: 10px;
+	align-items: center;
+	cursor: pointer;
+	
+}
+.service-icon{
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	margin-bottom: 30px;
+	margin-top: 16px;
+	border-radius: 50px;
+	border:3px solid blue;
+}
+.service-icon i{
+	line-height: 70px;
+	font-size: 26px;
+}
+.service-box:hover .service-icon{
+	background: blue;
+	color: #ddd;
+}
+.service-title{
+	font-style: 18px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+.service-desc{
+	font-size: 14px;
+}
+

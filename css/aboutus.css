@@ -1,0 +1,16 @@
+.col-1{
+	width: auto;
+	height: auto;
+	background-color: white;
+	justify-content: center;
+	text-align: center;
+	box-sizing: border-box;
+	border:2px solid transparent ;
+	font-family: "Times New Roman",Times,serif;
+	font-size: 20px;
+}
+#p1::first-letter{
+	color: royalblue;
+	font-size:100px;
+
+	
